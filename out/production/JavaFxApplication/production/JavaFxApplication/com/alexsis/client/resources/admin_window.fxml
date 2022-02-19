@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexsis.client.controllers.AdminWindowController">
+  <children>
+      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Пользователи">
+               <content>
+                  <AnchorPane prefHeight="720.0" style="-fx-background-color: #DAA520; -fx-border-color: #8B4513; -fx-border-width: 10; -fx-background-image: url('photo5.jpg');">
+                     <children>
+                        <Label fx:id="label_welcome1" alignment="CENTER" layoutX="326.0" layoutY="36.0" prefHeight="70.0" prefWidth="627.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="АДМИНСКАЯ ПАНЕЛЬ" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_log_out_2" layoutX="27.0" layoutY="601.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="187.0" text="Выйти" textFill="#e10d0d">
+                           <font>
+                              <Font name="Bodoni MT Poster Compressed" size="32.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1017.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo5.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="admin_user_table" focusTraversable="false" layoutX="241.0" layoutY="153.0" prefHeight="302.0" prefWidth="1017.0">
+                           <columns>
+                              <TableColumn fx:id="user_id" prefWidth="88.0" text="№" />
+                              <TableColumn fx:id="username" prefWidth="300.800048828125" text="Логин" />
+                              <TableColumn fx:id="password" minWidth="0.0" prefWidth="252.79998779296875" text="Пароль" />
+                              <TableColumn fx:id="email" prefWidth="210.39996337890625" text="email" />
+                              <TableColumn fx:id="role" minWidth="0.0" prefWidth="171.199951171875" text="Роль" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="addUserButton" layoutX="13.0" layoutY="47.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="216.0" text="Добавить пользователя">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteUserButton" layoutX="18.0" layoutY="203.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="205.0" text="Удалить пользователя">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateUserButton" layoutX="22.0" layoutY="129.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Обновить">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="searchUserButton" layoutX="22.0" layoutY="375.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Поиск">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="emailField" alignment="CENTER" layoutX="656.0" layoutY="525.0" prefHeight="48.0" prefWidth="168.0" promptText="email">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="searchUserText" focusTraversable="false" layoutX="22.0" layoutY="304.0" prefHeight="48.0" prefWidth="198.0" promptText="Введите логин">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="usernameField" alignment="CENTER" layoutX="257.0" layoutY="525.0" prefHeight="48.0" prefWidth="168.0" promptText="Логин">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="roleField" alignment="CENTER" layoutX="849.0" layoutY="525.0" prefHeight="48.0" prefWidth="168.0" promptText="Роль">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="chooseUserButton" layoutX="22.0" layoutY="525.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Выбрать">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="redactionUserFieldButton" layoutX="1044.0" layoutY="525.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Редактировать">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="passwordField" alignment="CENTER" layoutX="449.0" layoutY="525.0" prefHeight="48.0" prefWidth="168.0" promptText="Пароль">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Книги">
+               <content>
+                  <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #DAA520; -fx-border-color: #8B4513; -fx-border-width: 10; -fx-background-image: url('photo5.jpg');">
+                     <children>
+                        <Label fx:id="label_welcome" alignment="CENTER" layoutX="326.0" layoutY="36.0" prefHeight="70.0" prefWidth="627.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="АДМИНСКАЯ ПАНЕЛЬ" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_log_out_1" layoutX="61.0" layoutY="586.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="187.0" text="Выйти" textFill="#e10d0d">
+                           <font>
+                              <Font name="Bodoni MT Poster Compressed" size="32.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1017.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo5.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="admin_book_table" focusTraversable="false" layoutX="301.0" layoutY="153.0" prefHeight="302.0" prefWidth="956.0">
+                           <columns>
+                              <TableColumn fx:id="b_id" prefWidth="81.60000610351562" text="№" />
+                              <TableColumn fx:id="b_name" prefWidth="259.1999816894531" text="Название" />
+                              <TableColumn fx:id="b_author" minWidth="0.0" prefWidth="280.00006103515625" text="Автор" />
+                              <TableColumn fx:id="b_year" prefWidth="203.99993896484375" text="Год издания" />
+                              <TableColumn fx:id="b_quantity" minWidth="0.0" prefWidth="127.9998779296875" text="Количество (шт.)" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="addBookButton" layoutX="56.0" layoutY="129.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Добавить книгу">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteBookButton" layoutX="57.0" layoutY="194.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Удалить книгу">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateBookButton" layoutX="27.0" layoutY="47.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="258.0" text="Обновить данные в таблице" textFill="#291486">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="searchBookButton" layoutX="56.0" layoutY="374.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Поиск">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="b_yearField" layoutX="339.0" layoutY="549.0" prefHeight="48.0" prefWidth="270.0" promptText="Год издания">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="searchBookText" focusTraversable="false" layoutX="23.0" layoutY="304.0" prefHeight="48.0" prefWidth="265.0" promptText="Введите название">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="b_nameField" layoutX="339.0" layoutY="477.0" prefHeight="48.0" prefWidth="270.0" promptText="Название книги">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="b_quantityField" layoutX="663.0" layoutY="549.0" prefHeight="48.0" prefWidth="270.0" promptText="Количество">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="chooseBookButton" layoutX="57.0" layoutY="501.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Выбрать">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="redactionBookFieldButton" layoutX="989.0" layoutY="511.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Редактировать">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="b_authorField" layoutX="663.0" layoutY="477.0" prefHeight="48.0" prefWidth="269.0" promptText="Автор">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Бронь">
+               <content>
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #DAA520; -fx-border-color: #8B4513; -fx-border-width: 10; -fx-background-image: url('photo2.jpg'); -fx-background-image: url('photo3.jpg'); -fx-background-image: url('photo4.jpg');">
+                     <children>
+                        <ImageView fitHeight="237.0" fitWidth="591.0" layoutX="627.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo3.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="148.0" fitWidth="199.0" layoutX="1066.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo5.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="label_welcome21" alignment="CENTER" layoutX="409.0" layoutY="31.0" prefHeight="70.0" prefWidth="615.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="АДМИНСКАЯ ПАНЕЛЬ" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri" size="38.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_log_out_3" layoutX="367.0" layoutY="592.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="230.0" text="Выйти" textFill="RED">
+                           <font>
+                              <Font name="Bodoni MT Poster Compressed" size="32.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateBookingButton" layoutX="55.0" layoutY="519.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="263.0" text="Обновить данные в таблице" textFill="#291486">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="searchBookBookingButton" layoutX="794.0" layoutY="599.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="255.0" text="Поиск книги по названию">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchBookBookingText" focusTraversable="false" layoutX="794.0" layoutY="520.0" prefHeight="48.0" prefWidth="256.0" promptText="Введите название книги">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TableView fx:id="user_booking_table" focusTraversable="false" layoutX="334.0" layoutY="130.0" prefHeight="348.0" prefWidth="922.0">
+                           <columns>
+                              <TableColumn fx:id="bk_id" prefWidth="88.0" text="№" />
+                              <TableColumn fx:id="bk_user_id" prefWidth="215.19998168945312" text="Кто выдал" />
+                              <TableColumn fx:id="bk_b_name" minWidth="0.0" prefWidth="264.79998779296875" text="Название книги" />
+                              <TableColumn fx:id="bk_p_id" prefWidth="211.20001220703125" text="Кому выдали" />
+                              <TableColumn fx:id="bk_date" minWidth="0.0" prefWidth="143.199951171875" text="Срок" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="addBookingButton" layoutX="88.0" layoutY="238.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Добавить бронь">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="54.0" layoutY="31.0" prefHeight="115.0" prefWidth="266.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Нажмите на кнопку, чтобы &#10;добавить заброннированную книгу.&#10;Но перед этим проверьте наличие &#10;человека в списке &quot;бывалых&quot; &#10;посетителей." textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="60.0" layoutY="406.0" prefHeight="71.0" prefWidth="252.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Нажмите на кнопку, чтобы &#10;добавить отзыв о книге, &#10;которую вернул читатель." textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="deleteBookingButton" layoutX="88.0" layoutY="312.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Удалить бронь">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="checkPersonAdminButton" layoutX="48.0" layoutY="163.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="278.0" text="Посмотреть список посетителей">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Отзывы">
+               <content>
+                  <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #DAA520; -fx-border-color: #8B4513; -fx-border-width: 10; -fx-background-image: url('photo5.jpg');">
+                     <children>
+                        <Label fx:id="label_welcome3" alignment="CENTER" layoutX="463.0" layoutY="36.0" prefHeight="70.0" prefWidth="490.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="АДМИНСКАЯ ПАНЕЛЬ" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_log_out_4" layoutX="77.0" layoutY="562.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="187.0" text="Выйти" textFill="#e10d0d">
+                           <font>
+                              <Font name="Bodoni MT Poster Compressed" size="32.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1017.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo5.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="addReviewButtonAdmin" layoutX="71.0" layoutY="146.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Добавить отзыв">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteReviewButton" layoutX="72.0" layoutY="217.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Удалить отзыв">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="searchBookReviewButton" layoutX="72.0" layoutY="379.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Поиск">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchBookReviewText" focusTraversable="false" layoutX="36.0" layoutY="311.0" prefHeight="48.0" prefWidth="270.0" promptText="Введите название">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TableView fx:id="review_book_table" focusTraversable="false" layoutX="327.0" layoutY="148.0" prefHeight="346.0" prefWidth="882.0">
+                           <columns>
+                              <TableColumn fx:id="r_id" prefWidth="88.0" text="№" />
+                              <TableColumn fx:id="username_review" prefWidth="218.39996337890625" text="Имя работника" />
+                              <TableColumn fx:id="book_review" minWidth="0.0" prefWidth="244.0" text="Книга" />
+                              <TableColumn fx:id="review_text" minWidth="0.0" prefWidth="328.800048828125" text="Отзыв" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="updateReviewButton" layoutX="42.0" layoutY="47.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="258.0" text="Обновить данные в таблице" textFill="#291486">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+  </children>
+</VBox>

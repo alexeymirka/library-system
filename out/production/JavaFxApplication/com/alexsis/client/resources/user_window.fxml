@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexsis.client.controllers.UserWindowController">
+   <children>
+      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Книги">
+               <content>
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #DAA520; -fx-border-color: #8B4513; -fx-border-width: 10; -fx-background-image: url('photo2.jpg'); -fx-background-image: url('photo3.jpg'); -fx-background-image: url('photo4.jpg');">
+                     <children>
+                        <ImageView fitHeight="409.0" fitWidth="547.0" layoutX="17.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="label_welcome" alignment="CENTER" layoutX="418.0" layoutY="25.0" prefHeight="70.0" prefWidth="754.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="ПОЛЬЗОВАТЕЛЬСКАЯ ПАНЕЛЬ" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri" size="38.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="400.0" fitWidth="721.0" layoutX="503.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo3.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="216.0" fitWidth="397.0" layoutX="51.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo4.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="button_log_out" layoutX="92.0" layoutY="533.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="230.0" text="Выйти" textFill="RED">
+                           <font>
+                              <Font name="Bodoni MT Poster Compressed" size="32.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateBookButton" layoutX="36.0" layoutY="161.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="255.0" text="Обновить данные таблицы" textFill="#291486">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="user_book_table" focusTraversable="false" layoutX="323.0" layoutY="118.0" prefHeight="374.0" prefWidth="922.0">
+                           <columns>
+                              <TableColumn fx:id="b_id" prefWidth="88.0" text="№" />
+                              <TableColumn fx:id="b_name" prefWidth="268.7998962402344" text="Название" />
+                              <TableColumn fx:id="b_author" minWidth="0.0" prefWidth="234.40008544921875" text="Автор" />
+                              <TableColumn fx:id="b_year" minWidth="0.0" prefWidth="183.20001220703125" text="Год издания" />
+                              <TableColumn fx:id="b_quantity" minWidth="0.0" prefWidth="145.59995117187498" text="Количество (шт.)" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="searchBookButton" layoutX="36.0" layoutY="315.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="253.0" text="Поиск книги по названию">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchBookText" focusTraversable="false" layoutX="36.0" layoutY="247.0" prefHeight="48.0" prefWidth="255.0" promptText="Введите название книги">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="addBookButton" layoutX="64.0" layoutY="84.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Добавить книгу">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Бронь">
+               <content>
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #DAA520; -fx-border-color: #8B4513; -fx-border-width: 10; -fx-background-image: url('photo2.jpg'); -fx-background-image: url('photo3.jpg'); -fx-background-image: url('photo4.jpg');">
+                     <children>
+                        <ImageView fitHeight="237.0" fitWidth="591.0" layoutX="627.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo3.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="369.0" fitWidth="868.0" layoutX="36.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo2.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="354.0" fitWidth="522.0" layoutX="36.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@photo4.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="label_welcome2" alignment="CENTER" layoutX="418.0" layoutY="25.0" prefHeight="70.0" prefWidth="754.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="ПОЛЬЗОВАТЕЛЬСКАЯ ПАНЕЛЬ" textAlignment="CENTER">
+                           <font>
+                              <Font name="Calibri" size="38.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_log_out_2" layoutX="1025.0" layoutY="582.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="230.0" text="Выйти" textFill="RED">
+                           <font>
+                              <Font name="Bodoni MT Poster Compressed" size="32.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateBookingButton" layoutX="56.0" layoutY="575.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="263.0" text="Обновить данные в таблице" textFill="#291486">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="searchBookBookingButton" layoutX="658.0" layoutY="582.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="255.0" text="Поиск книги по названию">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchBookBookingText" focusTraversable="false" layoutX="658.0" layoutY="512.0" prefHeight="48.0" prefWidth="256.0" promptText="Введите название книги">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="addReviewButton" layoutX="70.0" layoutY="488.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Добавить отзыв">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="user_booking_table" focusTraversable="false" layoutX="334.0" layoutY="130.0" prefHeight="348.0" prefWidth="922.0">
+                           <columns>
+                              <TableColumn fx:id="bk_id" prefWidth="88.0" text="№" />
+                              <TableColumn fx:id="bk_user_id" prefWidth="215.19998168945312" text="Кто выдал" />
+                              <TableColumn fx:id="bk_b_name" minWidth="0.0" prefWidth="264.79998779296875" text="Название книги" />
+                              <TableColumn fx:id="bk_p_id" prefWidth="211.20001220703125" text="Кому выдали" />
+                              <TableColumn fx:id="bk_date" minWidth="0.0" prefWidth="143.199951171875" text="Срок" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="addBookingButton" layoutX="88.0" layoutY="229.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Добавить бронь">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="54.0" layoutY="31.0" prefHeight="115.0" prefWidth="266.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Нажмите на кнопку, чтобы &#10;добавить заброннированную книгу.&#10;Но перед этим проверьте наличие &#10;человека в списке &quot;бывалых&quot; &#10;посетителей." textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="45.0" layoutY="406.0" prefHeight="71.0" prefWidth="252.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Нажмите на кнопку, чтобы &#10;добавить отзыв о книге, &#10;которую вернул читатель." textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="deleteBookingButton" layoutX="88.0" layoutY="311.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="198.0" text="Удалить бронь">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="checkPersonButton" layoutX="48.0" layoutY="163.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="278.0" text="Посмотреть список посетителей">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>

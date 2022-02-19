@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexsis.client.controllers.SignUpController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-border-color: #8B4513; -fx-background-color: #DAA520; -fx-border-width: 10; -fx-background-image: url('photo1.jpg');">
+         <children>
+            <ImageView fitHeight="435.0" fitWidth="752.0" layoutX="24.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo1.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="79.0" layoutY="26.0" prefHeight="83.0" prefWidth="641.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Добро пожаловать в систему" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_username" alignment="CENTER" focusTraversable="false" layoutX="230.0" layoutY="153.0" prefHeight="50.0" prefWidth="318.0" promptText="Введите логин">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </TextField>
+            <Button fx:id="button_signup" layoutX="234.0" layoutY="499.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="331.0" text="ЗАРЕГИСТРИРОВАТЬСЯ">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="111.0" layoutY="592.0" prefHeight="67.0" prefWidth="317.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Уже не новичок?">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_log_in" layoutX="507.0" layoutY="593.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" style="-fx-cursor: hand; -fx-background-color: transparent;" text="Войди!" textFill="#635f41" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="rb_worker" layoutX="164.0" layoutY="425.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="132.0" selected="true" style="-fx-background-color: #FFFFE0; -fx-border-color: #BDB76B; -fx-border-width: 5;" text="Работник">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb_guest" layoutX="482.0" layoutY="425.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="132.0" style="-fx-background-color: #FFFFE0; -fx-border-color: #BDB76B; -fx-border-width: 5;" text="Гость" toggleGroup="$toggleGroup">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <Label alignment="CENTER" layoutX="324.0" layoutY="425.0" prefHeight="59.0" prefWidth="132.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Выберите!">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_email" alignment="CENTER" focusTraversable="false" layoutX="230.0" layoutY="219.0" prefHeight="50.0" prefWidth="318.0" promptText="Введите email">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="pass_toggle" alignment="CENTER" focusTraversable="false" layoutX="558.0" layoutY="296.0" mnemonicParsing="false" onAction="#togglevisiblePassword" prefHeight="26.0" prefWidth="211.0" style="-fx-background-color: #FFFFE0;" text="Показать пароль">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="tf_show_password" alignment="CENTER" focusTraversable="false" layoutX="230.0" layoutY="284.0" prefHeight="50.0" prefWidth="318.0" promptText="Показать пароль">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="tf_password" alignment="CENTER" focusTraversable="false" layoutX="230.0" layoutY="284.0" prefHeight="50.0" prefWidth="318.0" promptText="Введите пароль">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="tf_password_again" alignment="CENTER" focusTraversable="false" layoutX="231.0" layoutY="350.0" prefHeight="50.0" prefWidth="318.0" promptText="Повторите пароль">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

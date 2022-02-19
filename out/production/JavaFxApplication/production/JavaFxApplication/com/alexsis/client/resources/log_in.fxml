@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexsis.client.controllers.LogInController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-border-color: #8B4513; -fx-background-color: #DAA520; -fx-border-width: 10; -fx-background-image: url('photo1.jpg');">
+         <children>
+            <ImageView fitHeight="399.0" fitWidth="605.0" layoutX="108.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo1.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="86.0" layoutY="37.0" prefHeight="94.0" prefWidth="627.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Добро пожаловать в систему" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="38.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_username" alignment="CENTER" focusTraversable="false" layoutX="249.0" layoutY="220.0" prefHeight="59.0" prefWidth="301.0" promptText="Введите логин">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </TextField>
+            <Button fx:id="button_login" layoutX="294.0" layoutY="420.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="211.0" text="ВОЙТИ">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="182.0" layoutY="589.0" prefHeight="78.0" prefWidth="288.0" style="-fx-border-color: #BDB76B; -fx-background-color: #FFFFE0; -fx-border-width: 5;" text="Новый сотрудник?">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_sign_up" layoutX="487.0" layoutY="599.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="257.0" style="-fx-cursor: hand; -fx-background-color: transparent;" text="Зарегистрируйся!" textFill="#635f41" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="pass_toggle" alignment="CENTER" focusTraversable="false" layoutX="305.0" layoutY="378.0" mnemonicParsing="false" onAction="#togglevisiblePassword" prefHeight="26.0" prefWidth="211.0" style="-fx-background-color: #FFFFE0;" text="Показать пароль">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="tf_show_password" alignment="CENTER" focusTraversable="false" layoutX="249.0" layoutY="300.0" prefHeight="59.0" prefWidth="302.0" promptText="Показать пароль">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="tf_password" alignment="CENTER" focusTraversable="false" layoutX="248.0" layoutY="300.0" prefHeight="59.0" prefWidth="302.0" promptText="Введите пароль">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
